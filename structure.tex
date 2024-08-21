@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% English Beamer Presentation LaTeX Template
+% Version：1.0 (2024.08.21)
+% Author：ZJW
+% Compilor：XeLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   Cover and Global Configuration
+%----------------------------------------------------------------------------------------
+\usepackage{fontspec} 
+%----------------------------------------------------------------------------------------
+%   Font of English (Choose one)
+%----------------------------------------------------------------------------------------
+% \usefonttheme{serif} % USE serif
+\setmainfont[
+    Path=fonts/,
+    UprightFont=TIMES.TTF,
+    BoldFont=TIMESBD.TTF,
+    ItalicFont=TIMESI.TTF,
+    BoldItalicFont=TIMESBI.TTF
+]{Times New Roman} % Times New Roman
+
+\usepackage{color} 
+%% Customized color
+\definecolor{JLUPurple}{RGB}{102,8,116}
+\definecolor{JLUGreen}{RGB}{0,166,82}
+\definecolor{JLURed}{RGB}{157,41,51}
+\definecolor{JLUBlue}{RGB}{0, 0, 128}
+
+\usepackage{mathtools, amsmath, amsfonts, amsthm, latexsym} 
+\usepackage{newtxtext,newtxmath}
+\usepackage[justification=centering]{caption} 
+\setbeamertemplate{caption}[numbered]
+\captionsetup[figure]{font=small, labelfont=md}
+\captionsetup[table]{font=small, labelfont=md}
+\usepackage{graphicx}  
+\usepackage{booktabs}
+\usepackage{subfigure} 
+\usepackage{multirow} 
+\usepackage{array}
+\usepackage{enumerate} 
+\usepackage{tikz}
+\usepackage{natbib}
+\usepackage{comment}
+\renewcommand{\figurename}{fig.} 
+\renewcommand{\tablename}{tab.} 
+
+%----------------------------------------------------------------------------------------
+%	Layout theme (Select one)
+%----------------------------------------------------------------------------------------
+
+\mode<presentation>{
+% \usetheme{default} 
+% \usetheme{AnnArbor}  
+% \usetheme{Antibes}
+% \usetheme{Bergen}
+% \usetheme{Berkeley}
+% \usetheme{Berlin}
+% \usetheme{Boadilla}
+% \usetheme{CambridgeUS}
+% \usetheme{Copenhagen}
+\usetheme{Darmstadt}
+% \usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+% \usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+%----------------------------------------------------------------------------------------
+%	Layout theme (Select one)
+%----------------------------------------------------------------------------------------
+
+%\useoutertheme{default}
+% \useoutertheme{infolines}
+\useoutertheme{miniframes}
+% \useoutertheme{smoothbars} 
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%----------------------------------------------------------------------------------------
+%	Layout theme (Select one)
+%----------------------------------------------------------------------------------------
+%\setbeamercolor{section in head/foot}{fg=black, bg=white} 
+%\setbeamertemplate{mini frames}{}  
+\setbeamerfont{headline}{size=\scriptsize}
+\setbeamerfont{footline}{size=\scriptsize}
+\setbeamertemplate{navigation symbols}{} 
+
+%% Plan A:
+%\setbeamertemplate{footline} 
+%{\leavevmode%
+%\hbox{%
+%\begin{beamercolorbox}[wd=0.5\paperwidth,ht=3ex,dp=1ex,leftskip=3ex]%
+%{author in head/foot}%
+%{\scriptsize\textbf{\insertshortauthor}}%
+%\end{beamercolorbox}%
+%\begin{beamercolorbox}[wd=0.5\paperwidth,ht=3ex,dp=1ex,right]%
+%{author in head/foot}%
+%\scriptsize \textbf{{\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}}} 
+%\end{beamercolorbox}%
+%}}
+
+%% Plan B:
+%\setbeamertemplate{footline}[page number] 
+
+%% Plan C:
+%\setbeamertemplate{footline}[] 
+
+%----------------------------------------------------------------------------------------
+%	Layout theme (Select one)
+%----------------------------------------------------------------------------------------
+
+\usecolortheme{default}
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%----------------------------------------------------------------------------------------
+%   Color theme (Select one)
+%----------------------------------------------------------------------------------------
+\setbeamercolor{structure}{fg=JLUPurple} 
+%\setbeamercolor{title}{bg=green, fg=black} 
+%\setbeamercolor{frametitle}{bg=green,fg=black} 
+%\setbeamercolor{normal text}{fg=orange}
+%\setbeamercolor{block title}{bg=blue,fg=yellow} 
+%\setbeamercolor{block body}{bg=green,fg=red} 
+\setbeamercolor{alerted text}{fg=red} 
+
+%----------------------------------------------------------------------------------------
+%   Customized itemize and enumerate
+%----------------------------------------------------------------------------------------
+
+\useinnertheme{rounded} 
+%\useinnertheme{circles} 
+%\useinnertheme{rectangles}
+%\useinnertheme{inmargin} 
+
+%----------------------------------------------------------------------------------------
+%   Customized itemize color
+%----------------------------------------------------------------------------------------
+%\setbeamercolor{item projected}{bg=red}
+
+%----------------------------------------------------------------------------------------
+%   Customized Page
+%----------------------------------------------------------------------------------------
+\setbeamersize{text margin left=0.8cm, text margin right=0.8cm}
+\special{papersize=\the\paperwidth,\the\paperheight}
+\providecommand{\tabularnewline}{\\}
+}
+
+%----------------------------------------------------------------------------------------
+%	Background
+%----------------------------------------------------------------------------------------
+% \setbeamertemplate{background}{\includegraphics[height=\paperheight]{Fig/Background.png}}
+\usebackgroundtemplate{%
+	\tikz[overlay, remember picture] 
+	\node[opacity=0.3, below=-1.25cm, at=(current page.center)] 
+	{\includegraphics[scale = 0.14]{Fig/JLU_LOGO.png}}; 
+	}
