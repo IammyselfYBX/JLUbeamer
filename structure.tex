@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 中文简体模板
+% 版本：1.0 (2024.08.21)
+% 修改者：ZJW
+% 编译器：XeLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	封面及全局配置
+%----------------------------------------------------------------------------------------
+\usepackage{fontspec} 
+%----------------------------------------------------------------------------------------
+%	中文字体 (选择其中1个)
+% 
+% 	AutoFakeBold=3.5: 粗体的深度
+% 	AutoFakeSlant=0.2: 斜体的深度
+% 	Path = fonts/: 字体的路径
+%----------------------------------------------------------------------------------------
+\usepackage{xeCJK}
+% \setCJKmainfont[AutoFakeBold=3.5 , AutoFakeSlant=0.2, Path = fonts/]{cwTeX_圓體.ttf}
+% \setCJKmainfont[AutoFakeBold=3.5 , AutoFakeSlant=0.2, Path = fonts/]{SIMHEI.ttf} % 黑体
+% \setCJKmainfont[
+%     Path=fonts/, % 字体文件所在路径
+%     BoldFont=MSYHBD.ttc, % 粗体
+%     ItalicFont=MSYH.ttc, % 斜体（微软雅黑不区分斜体，所以用常规字体代替）
+%     SlantedFont=MSYH.ttc, % 斜体（如果需要，可以设置与常规字体一致）
+%     BoldItalicFont=MSYHBD.ttc, % 粗斜体（如果需要，可以设置与粗体一致）
+%     AutoFakeBold=3.5, % 自动加粗
+%     AutoFakeSlant=0.2 % 自动倾斜
+% ]{MSYH.ttc} % 微软雅黑
+% \setCJKmainfont[AutoFakeBold=3.5 , AutoFakeSlant=0.2, Path = fonts/]{华文行楷.ttf} 
+\setCJKmainfont[AutoFakeBold=3.5 , AutoFakeSlant=0.2, Path = fonts/]{SIMSUN.ttc} % 宋体
+% \setCJKmainfont[AutoFakeBold=3.5 , AutoFakeSlant=0.2, Path = fonts/]{SIMKAI.TTF} % 楷体
+\XeTeXlinebreaklocale "zh" % 這兩行用來調整中文自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+%----------------------------------------------------------------------------------------
+%	英文字体 (选择其中1个)
+% 
+%----------------------------------------------------------------------------------------
+% \usefonttheme{serif} % 使用 serif 字體
+\setmainfont[
+    Path=fonts/,
+    UprightFont=TIMES.TTF,
+    BoldFont=TIMESBD.TTF,
+    ItalicFont=TIMESI.TTF,
+    BoldItalicFont=TIMESBI.TTF
+]{Times New Roman} % Times New Roman
+
+\usepackage{color} 
+%% 自定义颜色
+\definecolor{JLUPurple}{RGB}{102,8,116}
+\definecolor{JLUGreen}{RGB}{0,166,82}
+\definecolor{JLURed}{RGB}{157,41,51}
+\definecolor{JLUBlue}{RGB}{0, 0, 128}
+
+\usepackage{mathtools, amsmath, amsfonts, amsthm, latexsym} 
+\usepackage{newtxtext,newtxmath}
+\usepackage[justification=centering]{caption} 
+\setbeamertemplate{caption}[numbered]
+\captionsetup[figure]{font=small, labelfont=md}
+\captionsetup[table]{font=small, labelfont=md}
+\usepackage{graphicx}  
+\usepackage{booktabs}
+\usepackage{subfigure} 
+\usepackage{multirow} 
+\usepackage{array}
+\usepackage{enumerate} 
+\usepackage{tikz}
+\usepackage{natbib}
+\usepackage{comment}
+\renewcommand{\figurename}{图} 
+\renewcommand{\tablename}{表} 
+
+%----------------------------------------------------------------------------------------
+%	排版形式 (选择其中1个)
+%----------------------------------------------------------------------------------------
+
+\mode<presentation>{
+% \usetheme{default} 
+% \usetheme{AnnArbor}  
+% \usetheme{Antibes}
+% \usetheme{Bergen}
+% \usetheme{Berkeley}
+% \usetheme{Berlin}
+% \usetheme{Boadilla}
+% \usetheme{CambridgeUS}
+% \usetheme{Copenhagen}
+\usetheme{Darmstadt}
+% \usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+% \usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+%----------------------------------------------------------------------------------------
+%	外框形式 (选择其中1个)
+%----------------------------------------------------------------------------------------
+
+%\useoutertheme{default}
+% \useoutertheme{infolines}
+\useoutertheme{miniframes}
+% \useoutertheme{smoothbars} 
+%\useoutertheme{sidebar}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+%----------------------------------------------------------------------------------------
+%	外框的个性化设置
+%----------------------------------------------------------------------------------------
+%\setbeamercolor{section in head/foot}{fg=black, bg=white} 
+%\setbeamertemplate{mini frames}{}  
+\setbeamerfont{headline}{size=\scriptsize}
+\setbeamerfont{footline}{size=\scriptsize}
+\setbeamertemplate{navigation symbols}{} 
+
+%% 方案1：
+%\setbeamertemplate{footline} 
+%{\leavevmode%
+%\hbox{%
+%\begin{beamercolorbox}[wd=0.5\paperwidth,ht=3ex,dp=1ex,leftskip=3ex]%
+%{author in head/foot}%
+%{\scriptsize\textbf{\insertshortauthor}}%
+%\end{beamercolorbox}%
+%\begin{beamercolorbox}[wd=0.5\paperwidth,ht=3ex,dp=1ex,right]%
+%{author in head/foot}%
+%\scriptsize \textbf{{\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}}} %頁碼控制選項
+%\end{beamercolorbox}%
+%}}
+
+%% 方案2
+%\setbeamertemplate{footline}[page number] 
+
+%% 方案3：
+%\setbeamertemplate{footline}[] 
+
+%----------------------------------------------------------------------------------------
+%	顏色主題 (选择其中1个)
+%----------------------------------------------------------------------------------------
+
+\usecolortheme{default}
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%----------------------------------------------------------------------------------------
+%	顏色主題的个性化设置
+%----------------------------------------------------------------------------------------
+\setbeamercolor{structure}{fg=JLUPurple} 
+%\setbeamercolor{title}{bg=green, fg=black} 
+%\setbeamercolor{frametitle}{bg=green,fg=black} 
+%\setbeamercolor{normal text}{fg=orange}
+%\setbeamercolor{block title}{bg=blue,fg=yellow} 
+%\setbeamercolor{block body}{bg=green,fg=red} 
+\setbeamercolor{alerted text}{fg=red} 
+
+%----------------------------------------------------------------------------------------
+%	enumerate 及 item 的形狀
+%----------------------------------------------------------------------------------------
+
+\useinnertheme{rounded} 
+%\useinnertheme{circles} 
+%\useinnertheme{rectangles}
+%\useinnertheme{inmargin} 
+
+%----------------------------------------------------------------------------------------
+%	个性化 item 的顏色
+%----------------------------------------------------------------------------------------
+%\setbeamercolor{item projected}{bg=red}
+
+%----------------------------------------------------------------------------------------
+%	个性化页面
+%----------------------------------------------------------------------------------------
+\setbeamersize{text margin left=0.8cm, text margin right=0.8cm}
+\special{papersize=\the\paperwidth,\the\paperheight}
+\providecommand{\tabularnewline}{\\}
+}
+
+%----------------------------------------------------------------------------------------
+%	背景
+%----------------------------------------------------------------------------------------
+% \setbeamertemplate{background}{\includegraphics[height=\paperheight]{Fig/Background.png}}
+\usebackgroundtemplate{%
+	\tikz[overlay, remember picture] 
+	\node[opacity=0.3, below=-1.25cm, at=(current page.center)] 
+	{\includegraphics[scale = 0.14]{Fig/JLU_LOGO.png}}; 
+	}
