@@ -12,3 +12,7 @@ latexmk -f main.tex
 ```
 
 > [关于Latex Live和Latexmk的配置](https://github.com/IammyselfYBX/.dotfile?tab=readme-ov-file#latex)
+
+## 演示视频
+https://github.com/user-attachments/assets/682ef409-7abf-4a6c-be70-e93f8795beea
+
